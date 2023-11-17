@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<title>your name-portfolio</title>
+<style>
+    body{
+        font-family: arial, sans-serif;
+        margin:0;
+        padding:0;
+        background-color: #f0f0f0;
+    }
+
+    header{
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+        padding: 2rem 0;
+        position:relative;
+    }
+
+    .header-content h1 {
+        font-size:2.5rem;
+    }
+
+    .profile-picture{
+        width: 100px;
+        height: 100px;
+        border-radius: 75%;
+        object-fit: cover;
+        position:absolute;
+        top: 75px;
+        left:75px;
+    }
+
+    nav{
+        background-color: #333;
+        color:#fff;
+        text-align: center;
+    }
+
+    nav ul {
+        list-style-type:none;
+        padding:0;
+    }
+
+    nav ul li{
+        display:inline;
+        margin:0 20px;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        color:#fff;
+    }
+
+    .section-content{
+        background-color: #fff;
+        padding: 2rem;
+        margin: 1rem;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgpa(0,0,0,1);
+        height:100px;
+
+    }
+
+    .download-button{
+        background-color: #333;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .download-button:hover{
+        background-color: blue;
+        font-size: 20px;
+        border-style: 1px solid black;
+
+    }
+
+    footer{
+        text-align: center;
+        padding: 1rem 0;
+        background-color: #555;
+        color:#fff;
+
+    }
+
+    ul{
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+    <img src="vasu img.jpeg" alt="mk spidey.jpg" class="profile-picture">
+    <h1>Praveen</h1>
+    <p>passionate on studying</p>
+ </div>
+</header>
+
+<nav>
+   <ul>
+    <li><a href="#about">about</a></li>
+    <li><a href="#education">education</a></li>
+    <li><a href="#skills">skills</a></li>
+    <li><a href="#projects">projects</a></li>
+    <li><a href="#resume">Resume</a></li>
+   </ul>
+</nav>
+
+<section id="about">
+      <div class="section-content">
+          <h2>About me</h2>
+         
+         <p>Hello Everyone! This is Praveen G and i am a computer science student.</p>
+         <p>studied at Annai College of Arts & Science-kumbakonam</p>
+      
+        </div>
+
+          
+</section>
+
+<section id="education">
+    <div class="section-content">
+        <h2>CS</h2>
+        <p>Bachlore of Computer Science</p>
+    
+    </div>
+</section>
+
+<section id="skills">
+    <div class="section-content">
+        <h2>skills</h2>
+        <ul>
+            <li>java devloper</li>
+            <li>python</li>
+            <li>web design</li>
+            <li>git</li>
+        </ul>
+    </div>
+
+</section>
+
+<section id="projects">
+    <div class="section-content">
+        <h2>projects</h2>
+        <ul>
+            <li><a href="#">project 1</a></li>
+            <li><a href="#">project 2 </a></li>
+        </ul>
+    </div>
+
+</section>
+
+<section id="resume">
+    <center>
+    <div id="section-content">
+        <h2>resume</h2>
+        <a href="Praveen resume.pdf" class="download-button">Download cv</a>
+    </div>
+    </center>
+</section>
+
+<footer>
+    <p>&copy; 2023 praveen</p>
+</footer>
+
+<script>
+    document.queryselectorAll('a[href^="#"]').forEach(another=>{
+        anchor.addEventListener('click',function(e){
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement){
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior:'smooth'
+                });
+            }
+
+        });
+    });
+</script>
+</body>
+</html>
